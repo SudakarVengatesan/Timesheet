@@ -1,0 +1,153 @@
+
+<!-- <div class="card">
+
+    <button (click)="previousWeek()">Previous</button>
+    <p>Date range: {{ dateRange }}</p>
+      
+        <button (click)="nextWeek()">Next</button>
+</div> -->
+<div class="card">
+    <div class="header">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link border-0 text-large" aria-label="Previous" (click)="previousWeek()">
+                  <span aria-hidden="true"><ion-icon name="arrow-back-circle"></ion-icon></span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link border-0 text-large" href="#">{{firstday}}-{{lastday}}</a></li>
+              <li class="page-item">
+                <a class="page-link border-0 text-large" aria-label="Next" (click)="nextWeek()">
+                  <span aria-hidden="true"><ion-icon name="arrow-forward-circle"></ion-icon></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
+    <div class="datetime">
+        <nav>
+          
+            <label for="touch1" (click)="toggleDropdown(1)">
+              
+              <span><ion-icon [name]="isDropdownOpen[0] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{firstday}}&nbsp;&nbsp;&nbsp;&nbsp; </span>
+              <button  (click)="openDialog(firstday)">+Add work</button>
+            </label>               
+            <input type="checkbox" id="touch1" > 
+              <ul class="slide" *ngIf="isDropdownOpen[0]" >
+              <li><table class="table table-borderless" >
+                <thead>
+                  <tr>
+                    <td scope="col-20">Project</td>
+                    <td scope="col-20">Time</td>
+                    <td scope="col-20">Hours</td>
+                    <td scope="col-20">Status</td>
+                    <td scope="col-20" class="action-time">Actions</td>
+                  </tr>
+                </thead>
+              </table>
+              </li>
+              <li><table class="table table-borderless" >
+                <thead>
+                  <tr>
+                    <td scope="col-20">Project A</td>
+                    <td scope="col-20">10:00 AM</td>
+                    <td scope="col-20">8</td>
+                    <td scope="col-20">Completed</td>
+                    <td class="action-time">
+                      <a (click)="ViewDialog(firstday)"><img src="assets/Images/icons8-edit-80.png"></a>
+                      <a (click)="openConfirmationDialog()"><img src="assets/Images/icons8-close-100.png"></a>
+                    </td>
+                  </tr>
+                </thead>
+              </table>
+              </li>
+            </ul>
+          </nav>
+
+          <nav>
+            <label for="touch2" (click)="toggleDropdown(2)">
+              
+              <span><ion-icon [name]="isDropdownOpen[1] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{secday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+            </label>               
+            <input type="checkbox" id="touch2" > 
+                    
+            <ul class="slide" *ngIf="isDropdownOpen[1]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+
+          <nav>
+            <label for="touch3" (click)="toggleDropdown(3)">
+              
+              <span><ion-icon [name]="isDropdownOpen[2] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{thrtday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+
+            </label>               
+            <input type="checkbox" id="touch3" > 
+                    
+            <ul class="slide" *ngIf="isDropdownOpen[2]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+
+          <nav>
+            <label for="touch4" (click)="toggleDropdown(4)">
+              
+              <span><ion-icon [name]="isDropdownOpen[3] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{fouday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+            </label>               
+            <input type="checkbox" id="touch4" > 
+                    
+            <ul class="slide" *ngIf="isDropdownOpen[3]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+
+         <nav>
+            <label for="touch5" (click)="toggleDropdown(5)">
+              
+              <span><ion-icon [name]="isDropdownOpen[4] ?'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{fivtday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+            </label>               
+            <input type="checkbox" id="touch5" > 
+                    
+            <ul class="slide" *ngIf="isDropdownOpen[4]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+
+          <nav>
+            <label for="touch6" (click)="toggleDropdown(6)">
+              
+              <span><ion-icon [name]="isDropdownOpen[5] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{sixtday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+            </label>               
+            <input type="checkbox" id="touch6" > 
+                    
+            <ul class="slide" *ngIf="isDropdownOpen[5]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+          
+          <nav>
+            <label for="touch7" (click)="toggleDropdown(7)">
+              <span><ion-icon [name]="isDropdownOpen[6] ? 'arrow-up-circle-outline' : 'arrow-down-circle-outline'"></ion-icon> {{lastday}}</span>
+              <button  (click)="openDialog(firstday)"><img src="assets/Images/icons8-add-64.png"></button>
+            </label>               
+            <input type="checkbox" id="touch7">                     
+            <ul class="slide" *ngIf="isDropdownOpen[6]">
+              <li><a href="">hi</a></li>
+            </ul>
+          </nav>
+          <div class="form-submit">
+            <input type="submit" name="submit" id="submit" class="Submit" value="Submit">
+          </div>
+
+          <div class="confirmation-dialog" *ngIf="showConfirmationDialog">
+            <p>Are you sure you want to delete?</p>
+            <button (click)="delete()">OK</button>
+          </div>
+    </div>
+</div>

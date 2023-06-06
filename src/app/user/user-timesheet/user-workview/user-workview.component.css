@@ -1,0 +1,148 @@
+/* 
+ .viewwork-form-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Viewwork-details {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #0098FF;
+ 
+  }
+  
+  .form-submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .Eidt, .Cancel {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .profile-form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-details {
+      max-width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="date"] {
+      max-width: 100%;
+    }
+  } */
+   
+.card{
+    padding: 10px 0;
+    position: relative;
+    /* background-color: #0098ff05; */
+    border: none;
+}
+h2{
+    text-align: center;
+}
+/* .viewwork-form{
+    width: 500px;
+    background: #fff;
+    margin: auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+} */
+/* .Viewwork-details{
+    padding: 50px 60px 70px;
+} */
+.list-item {
+    position: absolute;
+    width: 100%;
+}
+.select-list {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 55px;
+}
+.ion-icon .icon-inner {
+    padding: 1px;
+}
+svg{
+    padding-top: 2px;
+}
+input, select,textarea {
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 2px solid #ebebeb;
+        padding: 5px 0;
+        color: #222;
+        border-bottom: 1px solid #0098FF;
+        font-family: roboto slab;
+        padding-bottom: 10px;
+}
+input:focus,textarea:focus {
+    
+    border-bottom: 2px solid #0098FF;
+    outline: none; /* optional: removes the default focus outline */
+  }
+.form-submit{
+display: grid;
+}
+.Cancel {
+  margin-top: 5px;
+  }
+#submit{
+    width: auto;
+    background: #0098FF;
+    color: #fff;
+    padding: 16px 17px;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 15px 0 #0098FF;
+    -moz-box-shadow: 0 1px 15px 0 #0098FF;
+    
+}
+
+
+
+.white-background{
+  width: 100%;
+}

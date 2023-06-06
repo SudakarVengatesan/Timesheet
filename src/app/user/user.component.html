@@ -1,0 +1,43 @@
+<div class="page">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+    <div class="logo">
+      <img src="assets/Images/signatech-logo.svg" alt="logo">
+    </div>
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+        <ul class="nav-underline navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link" (click)="toggleTimeSheet()" [class.active]="showTimeSheet">Time sheet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="toggleUserReport()" [class.active]="showUserReport">Work Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="toggleUserProfile()" [class.active]="showUserProfile">Profile</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <ul class="nav nav-underline justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">Logout</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <div>
+  <div *ngIf="showTimeSheet">
+    <app-user-timesheet></app-user-timesheet>
+  </div>
+  
+  <div *ngIf="showUserProfile">
+    <app-user-profile></app-user-profile>
+  </div>
+  <div *ngIf="showUserReport">
+    <app-user-reporting></app-user-reporting>
+  </div>
+</div>
+</div>

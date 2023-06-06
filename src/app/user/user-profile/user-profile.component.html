@@ -1,0 +1,48 @@
+<div class="card">
+<div class="profile-form">
+    <div class="profile-details">
+        <div *ngIf="!editing">
+        <form>
+           <h2>Profile</h2>
+           <label for="fname">First name <ion-icon name="person"></ion-icon>:</label><input type="text" id="fname" name="fname" placeholder="First name"><br>
+           <label for="lname">Last name <ion-icon name="person"></ion-icon>:</label> <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+           <label for="lname">DOB <ion-icon name="calendar"></ion-icon>:</label><input type="date" id="DOB" name="DOB" placeholder="DOB"><br>
+           <label for="lname">Department <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="Department" name="Department" placeholder="Department"><br>
+           <label for="lname">Reporting Manager <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="RManager" name="RManager" placeholder="Reporting Manager"><br>
+           <label for="lname">Job Title <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="Job " name="Job" placeholder="Job Title"><br>
+           <label for="lname">Employee ID <ion-icon name="id-card"></ion-icon>:</label><input type="text" id="EmpID" name="EmpID" placeholder="Employee ID"><br>
+           <label for="lname">Email <ion-icon name="at-circle"></ion-icon>:</label><input type="text" id="Email" name="Email" placeholder="Email"><br>
+           <label for="lname">Contact <ion-icon name="phone-portrait"></ion-icon>:</label><input type="text" id="Contact" name="fname" placeholder="Contact No"><br>
+            
+           <div class="form-submit">
+            <input type="submit" name="submit" id="submit" class="Edit" (click)="editProfile()" value="Edit">
+            
+            </div>
+        </form> 
+    </div>
+   
+    <div *ngIf="editing">
+        <form>
+           <h2>Profile</h2>
+           <label for="fname">First name <ion-icon name="person"></ion-icon>:</label><input type="text" id="fname" name="fname" placeholder="First name"><br>
+           <label for="lname">Last name <ion-icon name="person"></ion-icon>:</label> <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+           <label for="lname">DOB <ion-icon name="calendar"></ion-icon>:</label><input type="date" id="DOB" name="DOB" placeholder="DOB"><br>
+           <label for="lname">Department <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="Department" name="Department" placeholder="Department"><br>
+           <label for="lname">Reporting Manager <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="RManager" name="RManager" placeholder="Reporting Manager"><br>
+           <label for="lname">Job Title <ion-icon name="reorder-three"></ion-icon>:</label><input type="text" id="Job " name="Job" placeholder="Job Title"><br>
+           <label for="lname">Employee ID <ion-icon name="id-card"></ion-icon>:</label><input type="text" id="EmpID" name="EmpID" placeholder="Employee ID"><br>
+           <label for="lname">Email <ion-icon name="at-circle"></ion-icon>:</label><input type="text" id="Email" name="Email" placeholder="Email"><br>
+           <label for="lname">Contact <ion-icon name="phone-portrait"></ion-icon>:</label><input type="text" id="Contact" name="fname" placeholder="Contact No"><br>
+            
+           <div class="form-submit">
+            <input type="submit" name="submit" id="submit" class="Eidt" (click)="saveProfile()"value="Save">
+            <input type="submit" name="submit" id="submit" class="Cancel" (click)="cancelEdit()"value="Cancel">
+            </div>
+        </form> 
+    </div>
+</div>
+</div>
+</div>
+
+
+

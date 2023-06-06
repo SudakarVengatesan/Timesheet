@@ -1,0 +1,60 @@
+<div class="body">
+  <div class="box">
+    <div class="container">
+      <div class="imagepart">
+        <img src="assets/Images/signatech-logo.svg" alt="logo">
+      </div>
+      <div class="top">
+
+        <header>Login</header>
+      </div>
+
+      <div class="input-field">
+        <input type="text" class="input" placeholder="Username" id="" required [(ngModel)]="username">
+        <ion-icon name="mail"></ion-icon>
+      </div>
+
+      <div class="input-field">
+        <input type="{{ showPassword ? 'text' : 'password' }}" class="input" placeholder="Password"
+          [(ngModel)]="password">
+        <ion-icon id="showPassword" name="{{showPassword ?'lock-open':'lock-closed'}}" ion-button icon-only clear
+          (click)="togglePassword()"></ion-icon>
+      </div>
+
+
+      <div class="input-field">
+        <input type="submit" class="submit" value="Login" id="" (click)="signin()">
+      </div>
+
+      
+
+      <button type="button" id="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Forget Password?
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">S</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Lost your password? Plaese enter your email address. Your will recieve a link to create a new password
+                via email</p>
+
+              <label>Email:</label>
+              <input id="pupEmail" type="text" placeholder="Enter user email" class="input" [(ngModel)]="email"
+                required>
+            </div>
+
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="sendMail()">Send mail</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

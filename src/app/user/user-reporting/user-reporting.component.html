@@ -1,0 +1,95 @@
+<div class="heading">
+
+    <h2>Hours Worked Report </h2>
+    <div class="filter">
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Project, Name, Status" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit"><ion-icon name="search"></ion-icon></button>
+        <button class="btn btn-outline-info" type="submit"><ion-icon name="refresh-outline"></ion-icon></button>
+      </form>
+      <div class="drop">
+        <mat-form-field class="white-background">
+          <mat-label>Favorite food</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  </div>      
+     <div class="table-responsive">
+
+      <table class="table table-borderless">
+        <!-- <thead>
+          <tr>
+            <th scope="col">Empolyee Name</th>
+            <th scope="col">Client</th>
+            <th scope="col">Project</th>
+            <th scope="col">Task</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Hours</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>?Empolyee Name?</td>
+            <td>?Client?</td>
+            <td>?Project?</td>
+            <td>?Task?</td>
+            <td [ngModel]="Description" id="desc"><a (click)="openDialog('Description')">View Description</a></td>
+            <td>?Date?</td>
+            <td>?Time?</td>
+            <td>?Hours?</td>
+            <td>?Status?</td>
+            <td class="action"><a href="#" class="approve"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+              </svg> </a> 
+              <a href="#" class="reject"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+              </svg></a>
+            </td> 
+        </tr> 
+             
+       
+        </tbody> -->
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+      
+     <div class="pagination-container">
+      <div class="page-size-container">
+        <label for="page-size-select">Items per page:</label>
+        <select id="page-size-select" [(ngModel)]="itemsPerPage" (change)="updatePageSize()" class="page-size-select">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+      <pagination-controls (pageChange)="currentPage = $event" class="page"></pagination-controls>
+    </div>
+    
+
+
+
+
+
+</div>

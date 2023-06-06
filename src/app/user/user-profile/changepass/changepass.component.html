@@ -1,0 +1,19 @@
+<div class="page">
+    <h2>Change Password</h2>
+    <label for="NewPassword">New Password:</label>
+    <div id="npass">
+        <input type="{{ newshowPassword ? 'text' : 'password' }}" id="NewPassword" name="NewPassword" placeholder="New Password" [(ngModel)]="newPassword"><ion-icon name="{{ newshowPassword ? 'eye-off-outline' : 'eye-outline' }}" (click)="toggleNewPasswordVisibility()"></ion-icon>
+        <!-- <img [src]="newshowPassword ? 'assets/Images/icons8-view-48.png' : 'assets/Images/icons8-invisible-48.png'" (click)="toggleNewPasswordVisibility()"><br> -->
+    </div>
+    <label for="ConfirmPassword">Confirm Password:</label>
+    
+   <div id="cpass">
+    <input type="{{ conshowPassword ? 'text' : 'password' }}" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPassword" (input)="checkPasswordMatch()"><br>
+    <ion-icon name="{{ conshowPassword ? 'eye-off-outline' : 'eye-outline' }}" (click)="toggleConPasswordVisibility()"></ion-icon>
+    <!-- <img [src]="conshowPassword ? 'assets/Images/icons8-view-48.png' : 'assets/Images/icons8-invisible-48.png'" (click)="toggleConPasswordVisibility()"> -->
+   </div>
+
+    <div class="Confirm">
+      <input *ngIf="passwordsMatch" type="submit" name="confirm" id="confirm" class="confirm" value="Confirm" >
+    </div>
+  </div>

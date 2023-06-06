@@ -1,0 +1,293 @@
+
+.heading{
+    margin: 25px 10px 0px 10px;
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+}
+.mat-form-field{
+  margin-right: 10px;
+}
+.mat-mdc-text-field-wrapper {
+  width: 100%;
+}
+form{
+
+    padding: 10px 10px 10px 0px;
+}
+.form-control{
+    width: 40%;
+}
+.filter #touch1 {
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+} 
+.action a:hover{
+    color: rgb(0,147,247);
+}   
+svg{
+    width: 25px;
+}
+.filter #touch1:checked + .slide {
+    height: 300px;
+} 
+.approve{
+    color:green;
+}
+.reject{
+    color: red;
+}
+/* .filter span {
+    padding: 10px;
+    
+    color: rgb(0,147,247);
+   
+    cursor: pointer;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(0 147 247 / 6%);
+    border-radius: 10px;
+}
+.filter .slide {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+    padding-right: 10px;
+  } 
+  .filter .slide li {
+      padding : 10px; 
+      list-style-type: none;
+      Text-align: initial;
+      box-shadow: rgba(188, 188, 209, 0.25) 0px 6px 12px -2px, rgba(2, 67, 245, 0.3) 0px 3px 7px -3px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgb(0 147 247 / 6%);
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  } */
+  .table{
+    text-align: center;
+  }
+  /* filter */
+
+/* dropdown */
+
+
+/* .select-menu{
+    width: 380px;
+    margin: 140px auto;
+} */
+button{
+    margin-left: 5px;
+}
+img{
+    width: 20px;
+}
+#desc{
+    cursor: pointer;
+    color:rgb(70, 155, 246) ;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: white;
+}
+.mat-form-field{
+    background-color: white;
+}
+
+.white-background {
+    background-color: white;
+  }  
+
+.select-menu .select-btn{
+    display: flex;
+    height: 40px;
+    background: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: aliceblue;
+    
+}
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+.select-menu .options{
+    position: absolute;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1;
+}
+.select-menu{
+    margin-left: 10px;
+}
+.select-menu .options.active{
+    display: block;
+}
+.options .option{
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+    z-index: 1;
+}
+.options .option:hover{
+    background: #F2F2F2;
+}
+.option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+.option .option-text{
+    font-size: 18px;
+    color: #333;
+}
+.drop{
+    width: 80%;
+    display: flex;
+}
+
+/* pagination-controls li .current .ng-star-inserted {
+    border-radius: 40px;
+    padding: 0.1875rem 0.625rem;
+    background: #0d6efd;
+    color: #fefefe;
+    cursor: default;
+}
+.ngx-pagination .current {
+    border-radius: 15px;
+    padding: 0.1875rem 0.625rem;
+    background: #0d6efd;
+    color: #fefefe;
+    cursor: default;
+} */
+pagination-controls{
+    text-align: center;
+}
+
+  ::ng-deep .ngx-pagination .current {
+    border-radius: 50%; /* Set border-radius to 50% */
+  }
+  ::ng-deep .ngx-pagination .page-link {
+    color: #007bff; /* Change the color of the pagination buttons to blue */
+  }
+
+  .page .ngx-pagination .current {
+    background-color: #007bff;
+    border-radius: 50%;
+  }
+
+  .page-size-select {
+    border: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .page-size-select:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .page-size-select option {
+    background-color: #fff;
+    color: #000;
+  }
+
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .page-size-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .page-size-container label {
+    margin-right: 0.5rem;
+  }
+  
+  .page-size-select {
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .page-size-select:hover {
+    border-color: #999;
+  }
+  
+  .page-size-select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .pagination-previous,
+  .pagination-next {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out;
+  }
+  
+  .pagination-previous:hover,
+  .pagination-next:hover {
+    color: #007bff;
+  }
+  
+  .pagination-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  select.page-size-select option {
+    background-color: #fff;
+    color: #333;
+    font-weight: normal;
+  }
+  
+  select.page-size-select option:hover {
+    background-color: #eee;
+  }

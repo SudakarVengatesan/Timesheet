@@ -1,0 +1,71 @@
+<mat-dialog-content>
+<div class="card">
+    <div class="viewwork-form">
+            <div class="Viewwork-details">
+                <form>
+                    <div *ngIf="!editing"><h2>View Work</h2></div> 
+                    <div *ngIf="editing"><h2>Update Work</h2></div>
+                    <label for="client">Client <ion-icon name="laptop"></ion-icon>:</label>
+                    <div>
+                      <mat-form-field appearance="fill" class="white-background">
+                        <mat-label *ngIf="!selectedValue">--Select Client Name--</mat-label>
+                        <mat-select [(ngModel)]="selectedValue" [disabled]="!editing">
+                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div><br>
+                    <label for="projectname">Project name <ion-icon name="journal"></ion-icon>:</label> 
+                    <div>
+                      <mat-form-field appearance="fill" class="white-background">
+                        <mat-label *ngIf="!selectedValue">--Select Client Name--</mat-label>
+                        <mat-select [(ngModel)]="selectedValue" [disabled]="!editing">
+                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div><br>
+                    <label for="task">Task <ion-icon name="clipboard"></ion-icon>:</label>
+                    <div>
+                      <mat-form-field appearance="fill" class="white-background">
+                        <mat-label *ngIf="!selectedValue">--Select Client Name--</mat-label>
+                        <mat-select [(ngModel)]="selectedValue" [disabled]="!editing">
+                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div><br>
+                    <label for="Description">Description<ion-icon name="reorder-four"></ion-icon>:</label>
+                    <textarea id="Description" name="Description" rows="4" cols="50" [disabled]="!editing"></textarea>
+                    <label for="Start">Start Time <ion-icon name="time"></ion-icon>:</label>
+                    <input type="time" id="Start" name="Start" placeholder="Start Time" [disabled]="!editing"><br>
+                    <label for="End">End Time <ion-icon name="time"></ion-icon>:</label>
+                    <input type="time" id="End" name="End" placeholder="End Time" [disabled]="!editing"><br>
+                    <label for="Hours">Hours <ion-icon name="hourglass"></ion-icon>:</label>
+                    <input type="text" id="Hours" name="Hours" placeholder="Hours" [disabled]="!editing"><br>
+                    <label for="Status">Status <ion-icon name="stats-chart"></ion-icon>:</label>
+                    <input type="text" id="Status" name="Status" placeholder="Status" value="Pending" [disabled]="!editing"><br>
+                            <div *ngIf="!editing">
+                            <div class="form-submit">
+                            <input type="submit" name="submit" id="submit" class="Edit" (click)="editWork()"
+                                value="Edit">
+                            <!-- <button mat-button (click)="close()">Cancel</button> -->
+                        </div>
+                        </div>
+                        <div *ngIf="editing">
+                            <div class="form-submit">
+                                <input type="submit" name="submit" id="submit" class="Update" (click)="updateWork()"
+                                    value="Update">
+                                <input type="submit" name="submit" id="submit" class="Cancel" (click)="cancelEdit()"
+                                    value="Cancel">
+                                <!-- <button mat-button (click)="close()">Cancel</button> -->
+                            </div>
+                        </div>
+                    </form>
+           </div>
+    </div>
+</div>
+</mat-dialog-content>
